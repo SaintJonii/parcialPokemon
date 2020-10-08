@@ -1,0 +1,2 @@
+# parcialPokemon
+Primer Parcial LabIV
