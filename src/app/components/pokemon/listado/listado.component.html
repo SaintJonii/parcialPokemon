@@ -1,0 +1,28 @@
+<div class="container justify-center m-5 animated fadeIn">
+
+    <h2>{{titulo}}</h2>
+
+    <div class="row m-5">
+        <div class="col">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Pokemon</th>
+                        <!--  <th>Tipo</th> -->
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let pokemon of listaPokemones">
+                        <td>{{pokemon.name}}</td>
+                        <!-- <td>{{pokemon.type}}</td> -->
+                        <td>
+                            <button (click)="verDetalle(pokemon)" class="btn btn-primary m-1">Detalle</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>

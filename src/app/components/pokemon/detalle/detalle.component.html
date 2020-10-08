@@ -1,0 +1,33 @@
+<app-loading *ngIf="loading"></app-loading>
+
+<div *ngIf="!loading" class="container m-3">
+    <h3> El pokemon seleccionado es : {{pokemon.name}}</h3>
+    <hr>
+
+    <h4>Habilidades:</h4>
+    <ul>
+        <li *ngFor="let item of listAbilitys">
+            {{item.name}}
+            <ul>
+                <li *ngFor="let desc of item.effect_entries">
+                    {{desc.short_effect }}
+                </li>
+            </ul>
+            <hr>
+        </li>
+    </ul>
+
+    <h3> Galeria de Imagenes</h3>
+    <hr>
+    <div class="card-columns">
+        <div class="card" *ngFor="let images of listImages">
+            <img [src]="images" class="card-img-top">
+            <div class="card-body">
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>
